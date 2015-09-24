@@ -26,13 +26,13 @@ app.controller('dashboardController', function($scope, topicFactory, userFactory
 			userFactory.updateUserTopics(data, name, function(info) {});
 			$scope.topics = data.data;
 			$scope.newTopic = {};
-			socket.emit('created_topic', data.info);
+			// socket.emit('created_topic', data.info);
 		})
 	}
 
-	socket.on('topic_added', function(data) {
-		$scope.$broadcast("new_topic", data);
-	})
+	// socket.on('topic_added', function(data) {
+	// 	$scope.$broadcast("new_topic", data);
+	// })
 
 	topicFactory.readTopics(function(data) {
 		$scope.topics = data;

@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 var fs = require('fs');
 
-mongoose.connect('mongodb://localhost/DATABASE');
+mongoose.connect('mongodb://localhost/discussion_board');
 
 var models_path = __dirname + '/../models'
 
